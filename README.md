@@ -17,7 +17,7 @@ I am curious to see how the AI-generated report compares against PolitiFact’s 
 ### Additional Information
 
 >[!NOTE]
->Due to content restrictions, the collected data cannot be shared in this repository. However, a sample instance is available [here](sample/)
+>Due to content restrictions, the collected data cannot be shared in this repository. However, a sample instance is available [here](https://github.com/beingenfa/face-check-plus/blob/bc2dd8e76445db25157db477fe43248bde99752b/data/sample/2d9a9d81-4774-48a8-9f7a-07bb2610333d.json)
 
 This project fetches news from the following aggregators:
 - **GNews** ([gnews.io](https://gnews.io/))
