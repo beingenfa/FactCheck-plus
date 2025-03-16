@@ -1,6 +1,6 @@
 # FactCheck+ 🧐
 
-FactCheck+ is a personal project to test how well LLMs can generate fact-checking reports given structured sources. It takes a claim that has already been fact-checked by [PolitiFact](https://www.politifact.com/), gathers the same sources they used (plus extra ones from news APIs), and asks an LLM to write its own verification report. 
+FactCheck+ is a personal project to test how well LLMs can generate fact-checking reports given sources. It takes a claim that has already been fact-checked by [PolitiFact](https://www.politifact.com/), gathers the same sources they used (plus extra ones from news APIs), and asks an LLM to write its own verification report. 
 
 ### Motivation
 
