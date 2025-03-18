@@ -1,6 +1,6 @@
 from src.core.data_aggregator.DataAggregator import DataAggregator
 from src.core.data_processor.DataProcessor import DataProcessor
-from src.utils.data import read_json
+from src.utils.data_io import read_json
 
 
 class Pipeline:

@@ -1,6 +1,6 @@
 import re, os, uuid
 from datetime import datetime
-from src.utils.data import write_json
+from src.utils.data_io import write_json
 
 from src.core.data_aggregator.config.paths import content_root
 
