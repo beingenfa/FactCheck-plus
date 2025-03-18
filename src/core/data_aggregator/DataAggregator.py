@@ -14,18 +14,18 @@ class DataAggregator:
 
     def extract_claim_related_data_given_politifact_url(self, politifact_url,save = True):
         claim_id = uuid.uuid4().__str__()
-        politico_data = self.politifact_scraper.return_page_content(article_url=politifact_url)
-        search_claim =  re.sub(r'[^A-Za-z0-9 ]+', '', politico_data['claim'])
+        politifact_data = self.politifact_scraper.return_page_content(article_url=politifact_url)
+        search_claim =  re.sub(r'[^A-Za-z0-9 ]+', '', politifact_data['claim'])
         news_agg = self.news_agg.fetch_news(search_claim)
         agg_data = {
-            'claim': politico_data['claim'],
-            'politico_claim check': politico_data['claim check'],
-            'politico sources': politico_data['sources'],
+            'claim': politifact_data['claim'],
+            'politifact_claim check': politifact_data['claim check'],
+            'politifact sources': politifact_data['sources'],
             'news sources': news_agg,
             '_meta': {
                 'politoco': {
                     'page url': politifact_url,
-                    'page content': politico_data['content']
+                    'page content': politifact_data['content']
                 },
             },
             '_internal_claim_id': claim_id,

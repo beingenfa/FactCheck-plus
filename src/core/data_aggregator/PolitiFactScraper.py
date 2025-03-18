@@ -20,7 +20,7 @@ class PolitiFactScraper:
 
             article_data["claim"] = self._return_claim(soup)
             article_data["claim check"] = self._return_claim_verification(soup)
-            article_data["content"] =  self._return_politico_page_content(soup)
+            article_data["content"] =  self._return_politifact_page_content(soup)
             article_data["sources"] = self.return_sources_with_content(soup)
 
             return article_data
@@ -47,7 +47,7 @@ class PolitiFactScraper:
             'alt'].upper()
 
     @staticmethod
-    def _return_politico_page_content(soup):
+    def _return_politifact_page_content(soup):
         # Content after removing unnecessary elements
         for tag in soup(["script", "style", "meta", "noscript"]):
             tag.extract()
@@ -83,7 +83,7 @@ class PolitiFactScraper:
         return sources_data
 
     @staticmethod
-    def return_politico_page_content(url):
+    def return_politifact_page_content(url):
         """Fetch and extract content from a given source URL."""
         try:
             response = requests.get(url)
